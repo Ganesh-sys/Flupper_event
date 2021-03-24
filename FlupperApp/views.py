@@ -19,9 +19,9 @@ class FlupperFashionShow(APIView):
         return Response(serializer.data)
 
     def post(self, request, format=None):
-        json_data=request.body
-        stream=io.BytesIO(json_data)
-        data=JSONParser().parse(stream)
+        #json_data=request.body
+        #stream=io.BytesIO(json_data)
+        #data=JSONParser().parse(stream)
         serializer = CategorySerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -66,9 +66,9 @@ class FlupperFashionShow1(APIView):
         return Response(serializer.data)
 
     def post(self, request, format=None):
-        json_data = request.body
-        stream = io.BytesIO(json_data)
-        data = JSONParser().parse(stream)
+        #json_data = request.body
+        #stream = io.BytesIO(json_data)
+        #data = JSONParser().parse(stream)
 
         serializer = Category_detailSerializer(data=request.data)
 
