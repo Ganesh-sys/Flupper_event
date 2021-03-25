@@ -9,6 +9,6 @@ class CategorySerializer(serializers.ModelSerializer):
 class Category_detailSerializer(serializers.ModelSerializer):
 	class Meta:
 		model=Category_details
-		fields=['category_name','event_name','start_date','end_date','create_date']
+		fields=['category_name','event_name','start_date','end_date','create_date','event_image']
 		#fields="__all__	"
 
